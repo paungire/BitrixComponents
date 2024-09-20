@@ -1,0 +1,5 @@
+/bitrix
+.DS_Store
+**/.DS_Store
+upload/tmp/
+upload/resize_cache/
