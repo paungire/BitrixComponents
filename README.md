@@ -1,1 +1,1 @@
-# BitrixComponents
+# BitrixComponents - верстка
