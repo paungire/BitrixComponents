@@ -1,0 +1,62 @@
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 8px 32px 0px #00000014;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 8px 0;
+}
+
+.tab-bar .tab {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0 22px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1b1f3ba6;
+  transition: color 0.2s;
+}
+
+.tab-bar .tab:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: 4px;
+  left: 13px;
+  right: 13px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s;
+}
+
+.tab-bar .tab.current {
+  color: #2f3243;
+}
+
+.tab-bar .tab.current::before,
+.tab-bar .tab:active::before {
+  opacity: 1;
+}
+
+.tab-bar .tab svg {
+  width: 24px;
+  height: 24px;
+  color: #1b1f3b66;
+  transition: color 0.2s;
+}
+
+.tab-bar .tab.current svg {
+  color: #2f3243;
+}
