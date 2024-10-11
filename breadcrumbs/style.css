@@ -1,0 +1,144 @@
+.back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #a2a6b2;
+  text-decoration: none;
+}
+
+.back.small {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.back.big {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+
+.back:hover {
+  color: #303030;
+}
+
+.back > * {
+  flex-shrink: 0;
+}
+
+.back svg {
+  width: 16px;
+  height: 16px;
+}
+
+.back.small svg {
+  width: 12px;
+  height: 12px;
+}
+
+.back.big svg {
+  width: 24px;
+  height: 24px;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbs .breadcrumb {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumbs .breadcrumb:not(:first-child)::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.57579 13.0909C5.34148 12.8566 5.34148 12.4767 5.57579 12.2423L9.8182 7.99994L5.57579 3.75753C5.34148 3.52322 5.34148 3.14332 5.57579 2.909C5.81011 2.67469 6.19001 2.67469 6.42432 2.909L11.091 7.57567C11.3253 7.80999 11.3253 8.18988 11.091 8.4242L6.42432 13.0909C6.19001 13.3252 5.81011 13.3252 5.57579 13.0909Z' fill='%23303030'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.breadcrumbs .breadcrumb svg {
+  width: 20px;
+  height: 20px;
+}
+
+.breadcrumbs.small .breadcrumb svg {
+  width: 16px;
+  height: 16px;
+}
+
+.breadcrumbs.big .breadcrumb svg {
+  width: 24px;
+  height: 24px;
+}
+
+.breadcrumbs .breadcrumb .tooltip {
+  position: absolute;
+  bottom: -12px;
+  left: 24px;
+  width: max-content;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transform: translateY(100%);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: #fff;
+  background-color: #526ed3;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.breadcrumbs .breadcrumb {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.breadcrumbs.small .breadcrumb {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.breadcrumbs.big .breadcrumb {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+
+.breadcrumbs .breadcrumb a {
+  color: #a2a6b2;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumbs .breadcrumb:has(a:hover) .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.breadcrumbs .breadcrumb svg,
+.breadcrumbs .breadcrumb.current,
+.breadcrumbs .breadcrumb a:hover {
+  color: #303030;
+}
+
+.breadcrumbs .breadcrumb *:not(.tooltip) {
+  max-width: 155px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
