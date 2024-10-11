@@ -1,0 +1,62 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 20px;
+  color: #526ed3;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.pagination.black .page {
+  color: #191c30e5;
+}
+
+.pagination.white .page {
+  color: #fff;
+}
+
+.pagination .page.current {
+  background: #526ed3;
+  color: #fff;
+}
+
+.pagination.black .page.page.current {
+  background: #000000;
+}
+
+.pagination .arrow svg {
+  width: 32px;
+  height: 32px;
+  color: #526ed3;
+}
+
+.pagination.black .arrow svg {
+  color: #191c30e5;
+}
+
+.pagination.white .arrow svg {
+  color: #fff;
+}
+
+.pagination.small .page {
+  width: 24px;
+  height: 24px;
+}
+
+.pagination.small .arrow svg {
+  width: 32px;
+  height: 32px;
+}
