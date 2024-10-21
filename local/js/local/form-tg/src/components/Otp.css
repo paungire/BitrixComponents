@@ -1,0 +1,79 @@
+.otp {
+	position: relative;
+	width: fit-content;
+	border-radius: 20px;
+	backdrop-filter: blur(20px);
+	overflow: hidden;
+	transition: all 0.2s ease-in-out;
+
+	height: 0;
+	padding: 0;
+	opacity: 0;
+	margin: 0;
+}
+
+.otp.open {
+	transition: all 0.2s ease-in-out;
+
+	height: auto;
+	padding: 20px;
+	opacity: 1;
+	margin: 20px 0;
+}
+
+.otp input {
+	height: 0px;
+	opacity: 0;
+	display: block;
+}
+
+.otp .digits {
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+}
+
+.otp .digits span {
+	width: 45px;
+	height: 45px;
+	border-radius: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	background-color: rgb(242, 242, 242);
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	color: rgb(0, 0, 0);
+	position: relative;
+}
+
+.otp .digits span.field {
+	background-color: white;
+	transition: all 0.2s ease-in-out;
+}
+
+.otp .digits span:hover {
+	/* background-color: rgb(206, 206, 206);
+	transition: all 0.2s ease-in-out; */
+}
+
+.otp .digits span.current {
+	background-color: #4800ff;
+	color: white;
+	transition: all 0.2s ease-in-out;
+}
+
+.otp .digits span.current:not(.field)::after {
+	content: "|";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.otp.error .digits span.field {
+	background-color: #ff5861;
+}

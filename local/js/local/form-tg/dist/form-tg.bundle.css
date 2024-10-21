@@ -1,0 +1,334 @@
+.application {
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+	padding-bottom: 58px;
+	max-width: 476px;
+}
+
+html {
+	line-height: 1.5;
+	font-family: Georgia, serif;
+	font-size: 16px;
+	color: #1a1a1a;
+	background-color: #fdfdfd;
+}
+body {
+	margin: 0 auto;
+	max-width: 36em;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	-webkit-hyphens: auto;
+	    -ms-hyphens: auto;
+	        hyphens: auto;
+	overflow-wrap: break-word;
+	text-rendering: optimizeLegibility;
+	-webkit-font-kerning: normal;
+	        font-kerning: normal;
+}
+@media (max-width: 600px) {
+	body {
+		font-size: 0.9em;
+		padding: 1em;
+	}
+	.text h1 {
+		font-size: 1.8em;
+	}
+}
+@media print {
+	body {
+		background-color: transparent;
+		color: black;
+		font-size: 12pt;
+	}
+	.text p,
+	.text h2,
+	.text h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	.text h2,
+	.text h3,
+	.text h4 {
+		page-break-after: avoid;
+	}
+}
+.text p {
+	margin: 1em 0;
+}
+.text a {
+	color: #1a1a1a;
+	text-decoration: underline;
+}
+.text a:visited {
+	color: #1a1a1a;
+}
+.text img {
+	max-width: 100%;
+}
+.text h1,
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6 {
+	margin-top: 1.4em;
+}
+.text h5,
+.text h6 {
+	font-size: 1em;
+	font-style: italic;
+}
+.text h6 {
+	font-weight: normal;
+}
+.text ol,
+.text ul {
+	padding-left: 1.7em;
+	margin-top: 1em;
+}
+.text li > ol,
+.text li > ul {
+	margin-top: 0;
+}
+.text blockquote {
+	margin: 1em 0 1em 1.7em;
+	padding-left: 1em;
+	border-left: 2px solid #e6e6e6;
+	color: #606060;
+}
+.text code {
+	font-family: Menlo, Monaco, "Lucida Console", Consolas, monospace;
+	font-size: 85%;
+	margin: 0;
+}
+.text pre {
+	margin: 1em 0;
+	overflow: auto;
+}
+.text pre code {
+	padding: 0;
+	overflow: visible;
+	overflow-wrap: normal;
+}
+.text .sourceCode {
+	background-color: transparent;
+	overflow: visible;
+}
+.text hr {
+	background-color: #1a1a1a;
+	border: none;
+	height: 1px;
+	margin: 1em 0;
+}
+.text table {
+	margin: 1em 0;
+	border-collapse: collapse;
+	width: 100%;
+	overflow-x: auto;
+	display: block;
+	font-variant-numeric: lining-nums tabular-nums;
+}
+.text table caption {
+	margin-bottom: 0.75em;
+}
+.text tbody {
+	margin-top: 0.5em;
+	border-top: 1px solid #1a1a1a;
+	border-bottom: 1px solid #1a1a1a;
+}
+.text th {
+	border-top: 1px solid #1a1a1a;
+	padding: 0.25em 0.5em 0.25em 0.5em;
+}
+.text td {
+	padding: 0.125em 0.5em 0.25em 0.5em;
+}
+.text header {
+	margin-bottom: 4em;
+	text-align: center;
+}
+#TOC li {
+	list-style: none;
+}
+#TOC ul {
+	padding-left: 1.3em;
+}
+#TOC > ul {
+	padding-left: 0;
+}
+#TOC a:not(:hover) {
+	text-decoration: none;
+}
+.text code {
+	white-space: pre-wrap;
+}
+.text span.smallcaps {
+	font-variant: small-caps;
+}
+.text div.columns {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: min(4vw, 1.5em);
+}
+.text div.column {
+	-webkit-box-flex: 1;
+	    -ms-flex: auto;
+	        flex: auto;
+	overflow-x: auto;
+}
+.text div.hanging-indent {
+	margin-left: 1.5em;
+	text-indent: -1.5em;
+}
+.text ul.task-list {
+	list-style: none;
+}
+.text ul.task-list li input[type="checkbox"] {
+	width: 0.8em;
+	margin: 0 0.8em 0.2em -1.6em;
+	vertical-align: middle;
+}
+.text .display.math {
+	display: block;
+	text-align: center;
+	margin: 0.5rem auto;
+}
+
+.text {
+	margin: 32px 0;
+}
+
+.alert {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%, 100%);
+	    -ms-transform: translate(-50%, 100%);
+	        transform: translate(-50%, 100%);
+	-webkit-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	-o-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.alert.open {
+	-webkit-transform: translate(-50%, 0);
+	    -ms-transform: translate(-50%, 0);
+	        transform: translate(-50%, 0);
+	-webkit-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	-o-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.otp {
+	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	border-radius: 20px;
+	-webkit-backdrop-filter: blur(20px);
+	        backdrop-filter: blur(20px);
+	overflow: hidden;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+	height: 0;
+	padding: 0;
+	opacity: 0;
+	margin: 0;
+}
+
+.otp.open {
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+	height: auto;
+	padding: 20px;
+	opacity: 1;
+	margin: 20px 0;
+}
+
+.otp input {
+	height: 0px;
+	opacity: 0;
+	display: block;
+}
+
+.otp .digits {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	gap: 4px;
+}
+
+.otp .digits span {
+	width: 45px;
+	height: 45px;
+	border-radius: 25%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	font-size: 12px;
+	background-color: rgb(242, 242, 242);
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	color: rgb(0, 0, 0);
+	position: relative;
+}
+
+.otp .digits span.field {
+	background-color: white;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.otp .digits span:hover {
+	/* background-color: rgb(206, 206, 206);
+	transition: all 0.2s ease-in-out; */
+}
+
+.otp .digits span.current {
+	background-color: #4800ff;
+	color: white;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.otp .digits span.current:not(.field)::after {
+	content: "|";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+.otp.error .digits span.field {
+	background-color: #ff5861;
+}

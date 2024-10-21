@@ -1,0 +1,7 @@
+.application {
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+	padding-bottom: 58px;
+	max-width: 476px;
+}
